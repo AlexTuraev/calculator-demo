@@ -73,7 +73,8 @@ public class CalcService {
         double n1 = Double.parseDouble(num1);
         double n2 = Double.parseDouble(num2);
         if (n2 == 0) {
-            return ("На 0 делить нельзя. Попробуйте поменять 2-й параметр");
+//            return ("На 0 делить нельзя. Попробуйте поменять 2-й параметр");
+            throw new IllegalArgumentException("На ноль делить нельзя");
         }else {
             return (num1 + " / " + num2 + " = " + Double.toString(n1 / n2));
         }
